@@ -35,7 +35,7 @@ ToDisplayMessage()
 function AddMessage()
 {
     NewMessage = {
-        "message" : prompt("Wanna add Message to your todo list? \n tip: your message must not be greater than 30, make it short as possible")
+        "message" : prompt("Wanna add Message to your todo list? \n tip: your message must not be greater than 27, make it short as possible")
     } 
     // if(SampleMessage == null || SampleMessage == ''){
     //     alert("can't be null");
@@ -53,7 +53,7 @@ function AddMessage()
 // function to delete Message
 function DeleteMessage(del)
 {
-    SampleMessage.splice(del,1);
+    SampleMessages.splice(del,1);
     ToDisplayMessage()
     localStorage.setItem("TodoMessages", JSON.stringify(SampleMessages));
 }
