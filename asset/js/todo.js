@@ -44,7 +44,7 @@ function AddMessage()
     // if(SampleMessage.length < 30){
     //     alert("Message Must not be greater than 30 !!!");
     // }else{
-    SampleMessage.push(NewMessage);
+    SampleMessages.push(NewMessage);
     ToDisplayMessage()
     localStorage.setItem("TodoMessages", JSON.stringify(SampleMessages));
     // }
