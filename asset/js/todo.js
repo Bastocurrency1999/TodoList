@@ -1,6 +1,6 @@
 // alert("YOU ARE WELCOME TO BASTO TODO LIST. \n YOU CAN ADD MESSAGE TO YOUR TODO LIST BY \n CLICKING ADD MESSAGE TODO +");
 // create an array for the sample todo Message
-SampleMessage = JSON.parse(localStorage.getItem("TodoMessages"));
+SampleMessages = JSON.parse(localStorage.getItem("TodoMessages"));
 
 // create a function to display Message
 // declare it as a global variable so as to be readily accessible 
@@ -8,7 +8,7 @@ ToDisplayMessage()
 function ToDisplayMessage()
 {
     displayMessages='';
-    for(i=0;i<SampleMessage.length;i++)
+    for(i=0;i<SampleMessages.length;i++)
     {
         displayMessages+=`
  	   <div class="message-wrapper">
@@ -16,7 +16,7 @@ function ToDisplayMessage()
 				<input type="radio" name="" id="" style="display:none;">
 			</div>
 		   <div class="message">
-			   <span>${SampleMessage[i].message}</span>
+			   <span>${SampleMessages[i].message}</span>
 		   </div>
             <div class="button-wrapper">
 				<img src="/asset/image/trash24.png" alt="" title="Delete Message" onclick="DeleteMessage(${i})">
@@ -46,7 +46,7 @@ function AddMessage()
     // }else{
     SampleMessage.push(NewMessage);
     ToDisplayMessage()
-    localStorage.setItem("TodoMessages", JSON.stringify(SampleMessage));
+    localStorage.setItem("TodoMessages", JSON.stringify(SampleMessages));
     // }
 }
 
@@ -55,7 +55,7 @@ function DeleteMessage(del)
 {
     SampleMessage.splice(del,1);
     ToDisplayMessage()
-    localStorage.setItem("TodoMessages", JSON.stringify(SampleMessage));
+    localStorage.setItem("TodoMessages", JSON.stringify(SampleMessages));
 }
 
 //function to Edit message
@@ -63,9 +63,9 @@ function EditMessage(edit)
 {
     NewMessage = {
         // wanna add placeholder to the edit
-        "message" : prompt("Edit your Message ",SampleMessage[edit].Message)
+        "message" : prompt("Edit your Message ",SampleMessages[edit].Message)
     }
-    SampleMessage[edit] = NewMessage;
+    SampleMessages[edit] = NewMessage;
     ToDisplayMessage()
-    localStorage.setItem("TodoMessages", JSON.stringify(SampleMessage));
+    localStorage.setItem("TodoMessages", JSON.stringify(SampleMessages));
 }
