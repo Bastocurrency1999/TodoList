@@ -41,13 +41,13 @@ function AddMessage()
     //     alert("can't be null");
     // }
     // else
-    if(SampleMessage.length < 30){
-        alert("Message Must not be greater than 30 !!!");
-    }else{
+    // if(SampleMessage.length < 30){
+    //     alert("Message Must not be greater than 30 !!!");
+    // }else{
     SampleMessage.push(NewMessage);
     ToDisplayMessage()
     localStorage.setItem("TodoMessages", JSON.stringify(SampleMessage));
-    }
+    // }
 }
 
 // function to delete Message
