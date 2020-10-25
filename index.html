@@ -8,27 +8,32 @@
 	<title>My Todo List</title>
 </head>
 <body>
-<!-- page wrapper starts -->
 <div class="page-wrapper">
 	<h3>Click on this button to see how it works</h3><br>
-	<button>How it works</button>
-	<!-- todo wrapper starts -->
-	<div class="todo-wrapper">
-		<!-- heading starts -->
-		<h1>My TodoList</h1>
-		<!-- Ends -->
-		<!-- Todo button starts -->
-        <button class="todo-button" onclick="AddMessage()" >Add Message Todo + </button>
-		<!-- Ends -->
-		<div class="todo" id="TodoWrapper">
-
+	<button class="how-it-works" onclick="showModalBox()">How it works</button>
+	<!-- add a modal box that will play the video automatically -->
+	<div class="modal-box" id="modal">
+		<button class="hide-button" id="modal-btn" onclick="hideModalBox()">X</button>
+       <div class="overlay">
+		   <div class="video-wrapper">
+			   <video src="/asset/video/TodoList.webm" autoplay="autoplay"></video>
+		   </div>
+	   </div>
 	</div>
-</div>
-	<!-- Ends -->
-</div>
-<!-- Ends -->
 
-<!-- add an external javascript file -->
+	<div class="todo-wrapper">
+		<h1>My TodoList</h1>
+
+        <button class="todo-button" onclick="AddMessage()" >Add Message Todo + </button>
+
+		<div class="todo" id="TodoWrapper"></div>
+
+</div>
+</div>
+
+<!-- add an external javascript file starts -->
 <script src="/asset/js/todo.js"></script>
+<script src="/asset/js/modal.js"></script>
+<!-- Ends -->
 </body>
 </html>

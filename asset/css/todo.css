@@ -20,6 +20,7 @@ div.page-wrapper{
 	height:100vh;
 	padding-top:20px;
 }
+
 /* styling for h3 starts */
 div.page-wrapper h3{
 	font-size:26px;
@@ -29,8 +30,9 @@ div.page-wrapper h3{
 	color:#383026;
 }
 /* Ends */
+
 /* styling for the button starts */
-div.page-wrapper button{
+div.page-wrapper .how-it-works{
 	display:block;
 	border:hidden;
 	width:15%;
@@ -45,13 +47,49 @@ div.page-wrapper button{
 	transition:600ms ease-in;
 }
 /* Ends */
+
+/* styling for the modal box starts */
+div.modal-box{
+	width:100%;
+	position:absolute;
+	top:0%;
+	height:120vh;
+	background-color:rgba(0,0,0,.8);
+	transition:600ms ease;
+	z-index:1;
+}
+/* styling for hide button starts */
+div.modal-box .hide-button{
+	position:absolute;
+	right:2%;
+	top:2%;
+}
+/* Ends */
+div.modal-box .overlay{
+	position: absolute;
+	width:50%;
+	height:500px;
+	background:white;
+	transform:translate(50%,30%);
+}
+.overlay .video-wrapper{
+	width:100%;
+	width:100%;
+}
+.overlay .video-wrapper video{
+	width:100%;
+	height:100%;
+}
+/* Ends */
+
 /* Add hover effect to the Button */
-div.page-wrapper button:hover{
+div.page-wrapper .how-it-works:hover{
 	background-color:#383026;
 	transition:600ms ease-out;
 	cursor:pointer;
 }
 /* Ends */
+
 /* styling for todo wrapper starts */
 div.page-wrapper .todo-wrapper{
 	border:hidden;
@@ -70,6 +108,7 @@ div.page-wrapper .todo-wrapper h1{
 	 text-shadow:1px 2px 2px white;
 }
 /* Ends */
+
 /* styling for todo button */
 div.page-wrapper .todo-wrapper .todo-button{
 	display:block;
@@ -84,6 +123,11 @@ div.page-wrapper .todo-wrapper .todo-button{
 	border-radius:10px;
 	outline:none;
 	transition:600ms ease-in;
+}
+div.page-wrapper .todo-wrapper .todo-button:hover{
+	background-color:#383026;
+	transition:600ms ease-out;
+	cursor:pointer;
 }
 div.page-wrapper .todo-wrapper .todo{
 	border:hidden;
@@ -102,6 +146,7 @@ div.page-wrapper .todo-wrapper .message-wrapper{
 	box-shadow:2px 2px 5px #E1C88F;
 	position:relative;
 }
+/* add a box before the message wrapper */
 div.page-wrapper .todo-wrapper .message-wrapper::before{
 	content:'';
 	border:2px solid #6E4626;
@@ -123,6 +168,7 @@ div.page-wrapper .todo-wrapper .message-wrapper .checked input[type=checkbox]{
 	height:100%;
 }
 /* Ends */
+/* Ends */
 
 /* styling for the message starts */
 div.page-wrapper .todo-wrapper .message-wrapper .message{
@@ -142,6 +188,9 @@ div.page-wrapper .todo-wrapper .message-wrapper .button-wrapper{
 	width:30%;
 	display:flex;
 }
+/* Ends */
+
+/* styling for the icon in the button wrapper */
 div.page-wrapper .todo-wrapper .message-wrapper .button-wrapper img{
 	width:25%;
 	border:2px solid #F6F1E8;
